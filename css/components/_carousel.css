@@ -11,7 +11,7 @@
     width: max-content;
     gap: 30px;
     padding-right: 30px;
-    animation: scroll linear 10s infinite;
+    animation: scroll linear 15s infinite;
 }
 
 @keyframes scroll {
