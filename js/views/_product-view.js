@@ -8,12 +8,17 @@ export function renderProducts(products) {
 
     const cardHTML = `
       <div class="prod-card">
-        <img src="${product.image}" alt="${product.alt}" class="prod-card-img">
-        <p>${formattedPrice}</p>
+        <figure>
+          <img src="${product.image}" alt="${product.alt}">
+        </figure>
+        <div class="info">
+          <p class="title">${product.title}</p>
+          <p class="price">${formattedPrice}</p>
+          <button class="btn-comprar" data-id="${product.id}">Adicionar no carrinho</button>
+        </div>
       </div>
     `;
 
-    // Injeta o HTML no contêiner
     container.insertAdjacentHTML('beforeend', cardHTML);
   });
 }
