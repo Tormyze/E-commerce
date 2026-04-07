@@ -28,7 +28,20 @@ export function addToCart(productId) {
     console.log(`Carrinho atualizado: `, cart);
 }
 
-export function getCartCount() {
-    const cart = getCart()
-    return cart.length
+export function removeOneFromCart(productId) {
+    const cart = getCart();
+    const idToRemove = Number(productId);
+    
+    // encontra a 1ª ocorrência do ID, mesmo que haja mais
+    const index = cart.indexOf(idToRemove);
+
+    // se encontrar
+    if (index > -1) {
+        cart.splice(index, 1);
+        localStorage.setItem(CART_KEY, JSON.stringify(cart));
+
+        console.log(`Removido 1 unidade - ID do produto: ${idToRemove}`);
+    }
 }
+
+export const getCartCount = () => getCart().length
