@@ -6,6 +6,8 @@
   box-shadow: 0 0 4px #00000059;
   border-radius: 10px;
   overflow: hidden;
+  width: 100%;
+  max-width: 250px;
 }
 
 .prod-card figure {

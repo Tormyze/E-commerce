@@ -6,16 +6,12 @@
   gap: 5em;
 }
 
-.footer-content .logo h4 {
-  font-size: 2em;
-}
+.footer-content .logo h4 {font-size: 2em}
 
-.footer-links ul {
-  list-style: none;
-}
+.footer-links ul {list-style: none}
 .footer-links ul li a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.644);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .footer-bottom {
@@ -24,6 +20,8 @@
   align-items: center;
   padding: 1em 0;
   font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.6);
+  border-top: dashed 2px rgba(0, 0, 0, 0.3);
 }
 
 footer {
