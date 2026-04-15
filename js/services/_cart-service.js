@@ -1,10 +1,10 @@
-import { getProducts } from './_data.js'
+import { getProducts } from "./_data.js";
 
-const CART_KEY = 'jukstore_cart'
+const CART_KEY = "jukstore_cart";
 
 export function getCart() {
-    const cartData = localStorage.getItem(CART_KEY)
-    return cartData ? JSON.parse(cartData) : []
+  const cartData = localStorage.getItem(CART_KEY);
+  return cartData ? JSON.parse(cartData) : [];
 }
 
 export async function getProcessedProducts() {
@@ -20,28 +20,28 @@ export async function getProcessedProducts() {
 }
 
 export function addToCart(productId) {
-    const cart = getCart()
-    cart.push(Number(productId))
+  const cart = getCart();
+  cart.push(Number(productId));
 
-    localStorage.setItem(CART_KEY, JSON.stringify(cart))
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
 
-    console.log(`Carrinho atualizado: `, cart);
+  console.log(`Carrinho atualizado: `, cart);
 }
 
 export function removeOneFromCart(productId) {
-    const cart = getCart();
-    const idToRemove = Number(productId);
-    
-    // encontra a 1ª ocorrência do ID, mesmo que haja mais
-    const index = cart.indexOf(idToRemove);
+  const cart = getCart();
+  const idToRemove = Number(productId);
 
-    // se encontrar
-    if (index > -1) {
-        cart.splice(index, 1);
-        localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  // encontra a 1ª ocorrência do ID, mesmo que haja mais
+  const index = cart.indexOf(idToRemove);
 
-        console.log(`Removido 1 unidade - ID do produto: ${idToRemove}`);
-    }
+  // se encontrar
+  if (index > -1) {
+    cart.splice(index, 1);
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+
+    console.log(`Removido 1 unidade - ID do produto: ${idToRemove}`);
+  }
 }
 
-export const getCartCount = () => getCart().length
+export const getCartCount = () => getCart().length;

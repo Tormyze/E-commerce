@@ -14,7 +14,7 @@ header {
 
 .logo img {
     width: 25px;
-    rotate: -20deg;
+    transform: rotate(-20deg);
 }
 
 nav {

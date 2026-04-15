@@ -1,19 +1,19 @@
 export function renderCheckout(prodsArray, totalValue) {
-    const checkoutList = document.querySelector('.checkout-list')
-    checkoutList.innerHTML = ''
+  const checkoutList = document.querySelector(".checkout-list");
+  checkoutList.innerHTML = "";
 
-    if (prodsArray.length === 0) {
-        checkoutList.innerHTML = `
+  if (prodsArray.length === 0) {
+    checkoutList.innerHTML = `
         <li>
             <p>Seu carrinho está vazio.</p>
         </li>`;
-        return
-    }
+    return;
+  }
 
-    prodsArray.forEach(product => {
-        const formattedPrice = `R$${(product.price * product.quantity).toFixed(2).replace('.', ',')}`
+  prodsArray.forEach((product) => {
+    const formattedPrice = `R$${(product.price * product.quantity).toFixed(2).replace(".", ",")}`;
 
-        const prodCardList = `<li>
+    const prodCardList = `<li>
             <figure>
                 <img src="${product.image}" alt="${product.alt}">
             </figure>
@@ -25,18 +25,18 @@ export function renderCheckout(prodsArray, totalValue) {
                     <img src="assets/icons/trash.svg" alt="Remove product icon">
                 </button>
             </div>
-        </li>`
-        checkoutList.insertAdjacentHTML('beforeend', prodCardList)
-    });
+        </li>`;
+    checkoutList.insertAdjacentHTML("beforeend", prodCardList);
+  });
 
-    const formattedPrice = `R$${totalValue.toFixed(2).replace('.', ',')}`
+  const formattedPrice = `R$${totalValue.toFixed(2).replace(".", ",")}`;
 
-    const totalHTML = `
+  const totalHTML = `
         <div class='total'>
             <p id="title">TOTAL</p>
             <p id="total-price" class="price">${formattedPrice}</p>
         </div>
-    `
+    `;
 
-    checkoutList.insertAdjacentHTML('beforeend', totalHTML)
+  checkoutList.insertAdjacentHTML("beforeend", totalHTML);
 }
