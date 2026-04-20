@@ -1,0 +1,20 @@
+.band-carousel {
+    background-color: red;
+    color: var(--c2);
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.band-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 30px;
+    padding-right: 30px;
+    animation: scroll linear 30s infinite;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
