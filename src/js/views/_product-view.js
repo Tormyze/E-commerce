@@ -1,5 +1,5 @@
 export function renderProducts(products) {
-  const container = document.querySelector('.products-container');
+  const container = document.querySelector('#products-container');
   container.innerHTML = '';
 
   products.forEach(product => {
