@@ -1,15 +1,24 @@
+@use "../base/variables" as v;
+
 .footer-content {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 1.2em;
   gap: 5em;
+
+  .logo {
+    display: flex;
+    gap: 10px;
+    img {width: 25px}
+  }
 }
 
-.footer-content .logo h4 {font-size: 2em}
+.footer-links ul {
+  list-style: none;
 
-.footer-links ul {list-style: none}
-.footer-links ul li a {color: rgba(0, 0, 0, 0.6)}
+  li a {color: rgba(0, 0, 0, 0.6)}
+}
 
 .footer-bottom {
   display: flex;
@@ -22,7 +31,7 @@
 }
 
 footer {
-  background-image: linear-gradient(to top, var(--c5), var(--c1));
+  background-image: linear-gradient(to top, v.$c5, v.$c1);
 }
 
 @media (max-width: 700px) {

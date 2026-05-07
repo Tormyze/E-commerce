@@ -1,6 +1,8 @@
+@use "../base/variables" as v;
+
 .band-carousel {
     background-color: red;
-    color: var(--c2);
+    color: v.$c2;
     overflow: hidden;
     padding: 10px 0;
 }

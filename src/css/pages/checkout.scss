@@ -1,0 +1,143 @@
+@use "../base/variables" as v;
+
+body {background-color: #fffac6}
+
+header {
+    box-shadow: v.$c4 0 1px 5px;
+    padding: 10px;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+    }
+
+    img {
+        width: 1em;
+        transition: ease-in-out 0.1s;
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+
+    h1 {font-size: 1em}
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-screen {
+    width: 60%;
+    margin: 20px 0;
+    background-color: white;
+    border: solid v.$c4 2px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: v.$c4 0 2px 1px;
+
+    h2 {
+        color: v.$c4;
+        font-weight: 500;
+        border-bottom: dashed 2px v.$c4;
+        margin-bottom: 10px;
+    }
+
+    .checkout-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Produtos no Cart */
+li {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    figure {
+        width: min(170px, 14vw);
+        aspect-ratio: 1/1;
+        border: solid 2px #000000ab;
+        border-radius: 5px;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .info-block {
+        flex: 1;
+        position: relative;
+
+        h3 {
+            font-size: 1.5em;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: normal;
+        }
+
+        .quantity {
+            color: grey;
+            font-size: 0.8em;
+        }
+
+        .price {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .btn-remove {
+            border: none;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            position: absolute;
+            right: 0; bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: ease-in-out 0.1s;
+
+            &:hover {
+                background-color: #ff0000;
+                cursor: pointer;
+            }
+
+            img {
+                padding: 10px;
+                &:hover {filter: invert(100%)}
+            }
+        }
+    }
+}
+
+.price {
+    color: #00ab00;
+    font-size: 1.1em;
+}
+/* Produtos no Cart */
+
+/* Total */
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: dashed 2px v.$c4;
+    padding-top: 8px;
+    font-size: 1em;
+    font-weight: 600;
+
+    #total-price {
+        font-weight: 600;
+    }
+}

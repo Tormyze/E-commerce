@@ -1,0 +1,70 @@
+@use "../base/variables" as v;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-image: linear-gradient(to top, v.$c5, v.$c3);
+    
+    .logo {
+        display: flex;
+        gap: 10px;
+        font-size: .6em;
+
+        img {
+            width: 25px;
+            transform: rotate(-20deg);
+        }
+    }
+    
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            gap: 20px;
+
+            li#cart-counter {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {cursor: pointer}
+
+                #cart-icon {
+                    width: 25px;
+                    transform: translateY(10%);
+                }
+
+                p {
+                    width: 15px;
+                    height: 15px;
+                    color: #fff;
+                    font-size: 0.6em;
+                    background-color: v.$cprice;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    right: 15px;
+                    top: 10px;
+                }
+            }
+
+            li a {
+                color: inherit;
+                transition: ease-in-out .1s;
+
+                &:hover {color: #000000c0}
+            }
+        }
+    }
+}
