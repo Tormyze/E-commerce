@@ -8,37 +8,37 @@
   },
   {
     "id": 2,
-    "image": "assets/prod-imgs/prod-img5.jpg",
+    "image": "assets/prod-imgs/prod-img2.jpg",
     "alt": "Imagem do produto",
-    "title": "Classic White Hoodie",
+    "title": "God's Perfect Tee",
     "price": 250.0
   },
   {
     "id": 3,
     "image": "assets/prod-imgs/prod-img3.jpg",
     "alt": "Imagem do produto",
-    "title": "Slim Fit Black T-Shirt",
+    "title": "Great Nature Black T-Shirt",
     "price": 300.0
   },
   {
     "id": 4,
     "image": "assets/prod-imgs/prod-img4.jpg",
     "alt": "Imagem do produto",
-    "title": "Navy Casual Tee",
+    "title": "Modern Neutral Casual Tee",
     "price": 90.0
   },
   {
     "id": 5,
-    "image": "assets/prod-imgs/prod-img2.jpg",
+    "image": "assets/prod-imgs/prod-img5.jpg",
     "alt": "Imagem do produto",
-    "title": "Retro Striped Shirt",
+    "title": "Intensity Vibe T-Shirt",
     "price": 150.0
   },
   {
     "id": 6,
     "image": "assets/prod-imgs/prod-img6.jpg",
     "alt": "Imagem do produto",
-    "title": "Dark Navy Streetwear",
+    "title": "Modern Black Suit",
     "price": 160.0
   }
 ]

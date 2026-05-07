@@ -3,6 +3,8 @@ import { renderProducts } from './views/_product-view.js';
 import { addToCart } from './services/_cart-service.js';
 import { updateCartDisplay } from './views/_cart-view.js';
 
+import confetti from 'canvas-confetti';
+
 async function initStore() {
   try {
     const products = await getProducts();
@@ -13,12 +15,15 @@ async function initStore() {
   }
 } document.addEventListener('DOMContentLoaded', initStore);
 
-const productsContainer = document.querySelector('.products-container')
+const productsContainer = document.querySelector('#products-container')
 productsContainer.addEventListener('click', (e) => {
   if (e.target.classList.contains('btn-comprar')) {
     const prodId = e.target.dataset.id
     addToCart(prodId)
     updateCartDisplay()
+    
+    confetti({origin: { x: 0, y: 1 }})
+    confetti({origin: { x: 1, y: 1 }})
 
     console.log('Produto adicionado ao carrinho - ID:', prodId)
   }
