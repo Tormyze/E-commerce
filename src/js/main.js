@@ -1,7 +1,7 @@
 import { getProducts } from './services/_data.js';
 import { renderProducts } from './views/_product-view.js';
 import { addToCart } from './services/_cart-service.js';
-import { updateCartDisplay } from './views/_cart-view.js';
+import { updateCartDisplay } from './views/_cartCounter-view.js';
 
 import confetti from 'canvas-confetti';
 
